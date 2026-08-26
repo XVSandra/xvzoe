@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-const EVENT_DATE = new Date("2026-08-15T19:00:00");
+import { evento } from "@/config/evento";
+
+const EVENT_DATE = new Date(evento.fecha.iso);
 
 function calcularTiempo() {
   const diff = EVENT_DATE.getTime() - Date.now();

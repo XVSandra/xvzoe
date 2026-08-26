@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { doc, getDoc, setDoc } from "firebase/firestore";
-
+import { evento } from "@/config/evento";
 import { db } from "@/lib/firebase";
 
 type RSVPFormProps = {
@@ -110,11 +110,11 @@ export default function RSVPForm({
     Confirmación de asistencia
   </h3>
 
-  <div className="mt-3 text-sm md:text-base text-[#6B5A75] leading-relaxed">
+ <div className="mt-3 text-sm md:text-base text-[#6B5A75] leading-relaxed">
   <p>Agradecemos tu respuesta a más tardar el</p>
 
   <p className="font-bold text-[#B78A25] text-xl md:text-2xl mt-1">
-    07 de agosto
+    {evento.rsvp.fechaLimite}
   </p>
 </div>
 </div>

@@ -1,6 +1,6 @@
 "use client";
 
-
+import { evento } from "@/config/evento";
 import "@fontsource/great-vibes";
 import "@fontsource/quicksand/400.css";
 import "@fontsource/quicksand/500.css";
@@ -171,14 +171,14 @@ catch (error: any) {
           </div>
 <div className="text-center mb-12" data-aos="fade-up">
   <p className="uppercase tracking-[0.32em] text-base md:text-xl text-[#FFF7EC]/90 mb-4 font-semibold">
-    15 de agosto 2026
+    {evento.fecha.texto}
   </p>
 
   <h2
     className="text-6xl md:text-9xl drop-shadow-lg text-[#F8E7A1]"
     style={{ fontFamily: "'Great Vibes', cursive" }}
   >
-    Sandra Alicia
+   {evento.nombre}
   </h2>
 
   <div className="mt-4 w-28 h-1 mx-auto rounded-full bg-[#F8E7A1]"></div>
@@ -306,15 +306,17 @@ catch (error: any) {
             <div data-aos="fade-up" data-aos-delay="100">
               <p className="font-semibold text-[#F8E7A1] mb-2">Mis Padres:</p>
               <div className="w-40 h-0.5 bg-[#F8E7A1] mx-auto my-4 rounded-full"></div>
-              <p>Sandra Angelina Ruiz Paredes</p>
-              <p>Adrián Valenzuela Barajas</p>
+              {evento.familia.padres.map((nombre) => (
+  <p key={nombre}>{nombre}</p>
+))}
             </div>
 
             <div data-aos="fade-up" data-aos-delay="200" className="mt-8">
               <p className="font-semibold text-[#F8E7A1] mb-2">Mis Padrinos:</p>
               <div className="w-40 h-0.5 bg-[#F8E7A1] mx-auto my-4 rounded-full"></div>
-              <p>Rocio Ruiz Paredes</p>
-              <p>Rogelio Ruiz Paredes</p>
+             {evento.familia.padrinos.map((nombre) => (
+  <p key={nombre}>{nombre}</p>
+))}
             </div>
 
          <div data-aos="fade-up" data-aos-delay="300" className="mt-10">
@@ -360,7 +362,7 @@ catch (error: any) {
       data-aos-delay="50"
     >
       <p className="font-semibold text-[#B78A25]">Fecha</p>
-      <p>Sábado 15 de agosto 2026</p>
+      <p>{evento.fecha.texto}</p>
       <p>7:00 pm</p>
     </div>
 
@@ -375,14 +377,15 @@ catch (error: any) {
         className="w-10 h-10 mb-4"
       />
 
-      <p className="font-semibold text-[#B78A25]">Salón Palladium</p>
-
+    <p className="font-semibold text-[#B78A25]">
+  {evento.lugar.nombre}
+</p>
       <p>
         Blvd. Lázaro Cárdenas 1085, Las Flores, 21330 Mexicali, B.C.
       </p>
 
       <a
-        href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n%20Palladium%20Mexicali"
+        href={evento.lugar.mapsUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block mt-5 px-6 py-3 rounded-full bg-[#7B4BA3] text-white font-semibold hover:bg-[#B78A25] transition"
@@ -398,7 +401,7 @@ catch (error: any) {
     >
       <img
         src="/images/jardin-miniatura.jpg"
-        alt="Palladium"
+        alt={evento.lugar.nombre}
         className="rounded-lg shadow-lg w-72 h-auto object-cover"
       />
     </div>
@@ -566,7 +569,7 @@ catch (error: any) {
                   <div className="rounded-[1.5rem] overflow-hidden border-4 border-[#F8E7A1] shadow-lg bg-[#FFF7EC]">
                     <img
                       src={foto}
-                      alt={`Foto de Sandra Alicia ${index + 1}`}
+                    alt={`Foto de ${evento.nombre} ${index + 1}`}
                       className="w-full aspect-[3/4] object-cover hover:scale-105 transition duration-500"
                     />
                   </div>
@@ -589,11 +592,7 @@ catch (error: any) {
             #XVSandraAlicia
           </h2>
 
-          <p className="max-w-2xl text-xl md:text-2xl text-[#4B3561]">
-            Comparte con nosotros tus fotos del evento usando el hashtag{" "}
-            <span className="font-semibold text-[#B78A25]">#XVSandraAlicia</span>.
-          </p>
-        </div>
+                </div>
       </section>
 
       <section className="py-16 px-6 text-center relative z-10" data-aos="zoom-in-up">

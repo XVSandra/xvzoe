@@ -1,6 +1,7 @@
 
 "use client";
 
+import { evento } from "@/config/evento";
 import { useEffect, useMemo, useState } from "react";
 import {
   collection,
@@ -388,7 +389,7 @@ const guardarEdicion = async () => {
 
 
 const copiarResumen = async () => {
-  const resumen = `Resumen XV Sandra Alicia 💖
+const resumen = `Resumen XV ${evento.nombre} 💖
 
 Invitados cargados: ${totalInvitados}
 Pases asignados: ${totalPasesAsignados}
@@ -432,13 +433,13 @@ const enviarWhatsApp = (telefono: string, codigo: string, nombre: string) => {
 
   const mensaje = `Hola ${nombre} 💜
 
-Con mucha ilusión te compartimos la invitación a los XV años de Sandra Alicia.
+${evento.textos.mensajeWhatsApp}
 
 Puedes ver todos los detalles y confirmar tu asistencia en el siguiente enlace:
 ${linkInvitacion}
 
 
-Agradecemos tu respuesta a más tardar el 07 de Agosto.`;
+Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 
   const urlWhatsApp = `https://wa.me/52${telefonoLimpio}?text=${encodeURIComponent(
     mensaje
@@ -469,14 +470,13 @@ const filas = registros.map((item) => {
   const linkInvitacion = `${urlBaseInvitacion}/?codigo=${item.codigo}`;
 
   const mensaje = `Hola ${item.nombre} 💜
-
-Con mucha ilusión te compartimos la invitación a los XV años de Sandra Alicia.
+${evento.textos.mensajeWhatsApp}
 
 Puedes ver todos los detalles y confirmar tu asistencia en el siguiente enlace:
 ${linkInvitacion}
 
 
-Agradecemos tu respuesta a más tardar el 31 de julio.`;
+Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 
   const linkWhatsApp = telefonoLimpio
     ? `https://wa.me/52${telefonoLimpio}?text=${encodeURIComponent(mensaje)}`
@@ -516,7 +516,7 @@ Agradecemos tu respuesta a más tardar el 31 de julio.`;
     const link = document.createElement("a");
 
     link.href = url;
-    link.download = "avance-confirmaciones-sandra-alicia.csv";
+    link.download = "avance-confirmaciones-zoe.csv";
     link.click();
 
     URL.revokeObjectURL(url);
@@ -531,7 +531,7 @@ Agradecemos tu respuesta a más tardar el 31 de julio.`;
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <p className="uppercase tracking-[0.3em] text-xs text-[#9b355e] mb-2">
-                XV Sandra Alicia
+                {evento.textos.tituloAdmin}
               </p>
 
               <h1 className="text-3xl md:text-5xl font-bold text-[#FF3471]">
