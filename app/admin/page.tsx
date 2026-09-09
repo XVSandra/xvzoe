@@ -524,21 +524,21 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 
   return (
   <AdminPasswordGate>
-    <main className="min-h-screen bg-[#fff8fb] text-[#4b2433] p-4 md:p-8">
+    <main className="min-h-screen bg-[#F7EFE3] text-[#241B18] p-4 md:p-8 selection:bg-[#B08D57]/25">
 
       <div className="max-w-7xl mx-auto">
-        <section className="bg-white rounded-[32px] shadow-lg p-6 md:p-8 mb-6">
+        <section className="bg-[#FFF9F0] border border-[#B08D57]/20 rounded-[32px] shadow-lg p-6 md:p-8 mb-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <p className="uppercase tracking-[0.3em] text-xs text-[#9b355e] mb-2">
+              <p className="uppercase tracking-[0.3em] text-xs text-[#6E171A] mb-2">
                 {evento.textos.tituloAdmin}
               </p>
 
-              <h1 className="text-3xl md:text-5xl font-bold text-[#FF3471]">
+              <h1 className="text-3xl md:text-5xl font-bold text-[#6E171A]">
                 Panel de confirmaciones
               </h1>
 
-              <p className="mt-2 text-gray-600">
+              <p className="mt-2 text-[#5A4A42]">
                 Consulta invitados, pendientes, confirmaciones y descarga el reporte.
               </p>
             </div>
@@ -546,14 +546,14 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
           <div className="flex flex-wrap gap-3">
   <button
     onClick={() => setCreandoInvitado(true)}
-    className="px-5 py-3 rounded-full bg-[#FEA201] text-white font-semibold hover:bg-[#FF3471] transition"
+    className="px-5 py-3 rounded-full bg-[#B08D57] text-white font-semibold hover:bg-[#6E171A] transition"
   >
     + Nuevo invitado
   </button>
 
   <button
     onClick={cargarDatos}
-    className="px-5 py-3 rounded-full border border-[#FF3471] text-[#FF3471] font-semibold hover:bg-pink-50 transition"
+    className="px-5 py-3 rounded-full border border-[#6E171A] text-[#6E171A] font-semibold hover:bg-[#FBF4E8] transition"
   >
     Actualizar
   </button>
@@ -561,14 +561,14 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
   <button
     onClick={descargarCSV}
     disabled={registros.length === 0}
-    className="px-5 py-3 rounded-full bg-[#FF3471] text-white font-semibold hover:bg-[#FEA201] transition disabled:opacity-50"
+    className="px-5 py-3 rounded-full bg-[#6E171A] text-white font-semibold hover:bg-[#B08D57] transition disabled:opacity-50"
   >
     Descargar CSV
   </button>
 
 <a
   href="/admin/libro"
-  className="px-5 py-3 rounded-full bg-[#7B4BA3] text-white font-semibold hover:bg-[#B78A25] transition"
+  className="px-5 py-3 rounded-full bg-[#3A0F12] text-white font-semibold hover:bg-[#6E171A] transition"
 >
   Libro de visitas
 </a>
@@ -584,60 +584,60 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
         )}
 
         <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
-          <div className="bg-white rounded-3xl shadow p-5">
-            <p className="text-sm text-gray-500">Invitados</p>
-            <p className="text-3xl font-bold text-[#FF3471]">
+          <div className="bg-[#FFF9F0] border border-[#B08D57]/20 rounded-3xl shadow p-5">
+            <p className="text-sm text-[#78675E]">Invitados</p>
+            <p className="text-3xl font-bold text-[#6E171A]">
               {totalInvitados}
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow p-5">
-            <p className="text-sm text-gray-500">Confirmados</p>
+          <div className="bg-[#FFF9F0] border border-[#B08D57]/20 rounded-3xl shadow p-5">
+            <p className="text-sm text-[#78675E]">Confirmados</p>
             <p className="text-3xl font-bold text-green-600">
               {totalSiAsisten}
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow p-5">
-            <p className="text-sm text-gray-500">Pendientes</p>
+          <div className="bg-[#FFF9F0] border border-[#B08D57]/20 rounded-3xl shadow p-5">
+            <p className="text-sm text-[#78675E]">Pendientes</p>
             <p className="text-3xl font-bold text-yellow-600">
               {totalPendientes}
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow p-5">
-            <p className="text-sm text-gray-500">No asistirán</p>
+          <div className="bg-[#FFF9F0] border border-[#B08D57]/20 rounded-3xl shadow p-5">
+            <p className="text-sm text-[#78675E]">No asistirán</p>
             <p className="text-3xl font-bold text-red-600">
               {totalNoAsisten}
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow p-5">
-            <p className="text-sm text-gray-500">Pases asignados</p>
-            <p className="text-3xl font-bold text-[#FEA201]">
+          <div className="bg-[#FFF9F0] border border-[#B08D57]/20 rounded-3xl shadow p-5">
+            <p className="text-sm text-[#78675E]">Pases asignados</p>
+            <p className="text-3xl font-bold text-[#B08D57]">
               {totalPasesAsignados}
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow p-5">
-            <p className="text-sm text-gray-500">% avance</p>
-            <p className="text-3xl font-bold text-[#9b355e]">
+          <div className="bg-[#FFF9F0] border border-[#B08D57]/20 rounded-3xl shadow p-5">
+            <p className="text-sm text-[#78675E]">% avance</p>
+            <p className="text-3xl font-bold text-[#6E171A]">
               {porcentajeConfirmacion}%
             </p>
           </div>
         </section>
 
-        <section className="bg-white rounded-[32px] shadow-lg p-4 md:p-6 mb-6">
+        <section className="bg-[#FFF9F0] border border-[#B08D57]/20 rounded-[32px] shadow-lg p-4 md:p-6 mb-6">
           <div className="mb-4">
 
-<section className="bg-white rounded-[32px] shadow-lg p-4 md:p-6 mb-6">
+<section className="bg-[#FFF9F0] border border-[#B08D57]/20 rounded-[32px] shadow-lg p-4 md:p-6 mb-6">
   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
     <div>
-      <h2 className="text-2xl font-bold text-[#9b355e] mb-3">
+      <h2 className="text-2xl font-bold text-[#6E171A] mb-3">
         Resumen rápido
       </h2>
 
-      <div className="bg-pink-50 border border-pink-100 rounded-2xl p-4 text-sm leading-7 text-gray-700">
+      <div className="bg-[#FBF4E8] border border-[#D8B76D]/35 rounded-2xl p-4 text-sm leading-7 text-gray-700">
         <p>
           <strong>Invitados cargados:</strong> {totalInvitados}
         </p>
@@ -664,28 +664,28 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 
     <button
       onClick={copiarResumen}
-      className="px-5 py-3 rounded-full bg-[#FF3471] text-white font-semibold hover:bg-[#FEA201] transition"
+      className="px-5 py-3 rounded-full bg-[#6E171A] text-white font-semibold hover:bg-[#B08D57] transition"
     >
       Copiar resumen
     </button>
   </div>
 </section>
-            <div className="w-full bg-pink-100 rounded-full h-4 overflow-hidden">
+            <div className="w-full bg-[#F1E1C8] rounded-full h-4 overflow-hidden">
               <div
-                className="bg-[#FF3471] h-4 rounded-full transition-all"
+                className="bg-[#6E171A] h-4 rounded-full transition-all"
                 style={{ width: `${porcentajeConfirmacion}%` }}
               />
             </div>
 
-            <p className="text-sm text-gray-500 mt-2">
+            <p className="text-sm text-[#78675E] mt-2">
               Avance de confirmación: {porcentajeConfirmacion}%
             </p>
           </div>
         </section>
 
-       <section className="bg-white rounded-[32px] shadow-lg p-4 md:p-6">
+       <section className="bg-[#FFF9F0] border border-[#B08D57]/20 rounded-[32px] shadow-lg p-4 md:p-6">
   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-    <h2 className="text-2xl font-bold text-[#9b355e]">
+    <h2 className="text-2xl font-bold text-[#6E171A]">
       Detalle por invitado
     </h2>
 
@@ -695,7 +695,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
   value={busqueda}
   onChange={(e) => setBusqueda(e.target.value)}
   placeholder="Buscar por nombre, código, teléfono o grupo..."
-  className="w-full md:w-80 border border-pink-200 rounded-full px-4 py-2 outline-none focus:ring-2 focus:ring-[#FF3471]/30 text-sm"
+  className="w-full md:w-80 border border-[#B08D57]/45 rounded-full px-4 py-2 outline-none focus:ring-2 focus:ring-[#B08D57]/30 text-sm"
 />
 
 
@@ -707,8 +707,8 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
             onClick={() => setFiltroEstado(estado)}
             className={`px-4 py-2 rounded-full text-sm font-semibold transition ${
               filtroEstado === estado
-                ? "bg-[#FF3471] text-white"
-                : "bg-pink-50 text-[#9b355e] hover:bg-pink-100"
+                ? "bg-[#6E171A] text-white"
+                : "bg-[#FBF4E8] text-[#6E171A] hover:bg-[#F1E1C8]"
             }`}
           >
             {estado}
@@ -720,16 +720,16 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 
 
           {cargando ? (
-            <p className="text-center py-10 text-gray-500">Cargando...</p>
+            <p className="text-center py-10 text-[#78675E]">Cargando...</p>
           ) : registrosFiltrados.length === 0 ? (
-            <p className="text-center py-10 text-gray-500">
+            <p className="text-center py-10 text-[#78675E]">
               No hay invitados para este filtro.
             </p>
           ) : (
             <div className="overflow-x-auto">
               <table className="w-full border-collapse text-sm">
                 <thead>
-                  <tr className="bg-[#FF3471] text-white">
+                  <tr className="bg-[#3A0F12] text-[#FFF9F0] border-b-2 border-[#B08D57]">
                     <th className="p-3 text-left">Código</th>
                     <th className="p-3 text-left">Nombre</th>
                     <th className="p-3 text-left">Pases</th>
@@ -750,7 +750,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 
                 <tbody>
                   {registrosFiltrados.map((item) => (
-                    <tr key={item.codigo} className="border-b hover:bg-pink-50">
+                    <tr key={item.codigo} className="border-b hover:bg-[#FBF4E8]">
                       <td className="p-3 font-semibold">{item.codigo}</td>
                       <td className="p-3">{item.nombre || "-"}</td>
                       <td className="p-3">{item.pases}</td>
@@ -760,16 +760,16 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
                         <span
                           className={`px-3 py-1 rounded-full text-xs font-semibold ${
                             item.estado === "Confirmado"
-                              ? "bg-green-100 text-green-700"
+                              ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
                               : item.estado === "No asistirá"
-                              ? "bg-red-100 text-red-700"
-                              : "bg-yellow-100 text-yellow-700"
+                              ? "bg-red-50 text-red-800 border border-red-200"
+                              : "bg-[#FBF4E8] text-[#8A681F] border border-[#D8B76D]/50"
                           }`}
                         >
                           {item.estado}
                         </span>
                       </td>
-                      <td className="p-3 font-bold text-[#FF3471]">
+                      <td className="p-3 font-bold text-[#6E171A]">
                         {item.cantidadConfirmada}
                       </td>
 
@@ -784,7 +784,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 <td className="p-3">
   <button
     onClick={() => copiarLink(item.codigo)}
-    className="px-3 py-2 rounded-full bg-pink-50 text-[#FF3471] text-xs font-semibold hover:bg-pink-100 transition"
+    className="px-3 py-2 rounded-full bg-[#FBF4E8] text-[#6E171A] text-xs font-semibold hover:bg-[#F1E1C8] transition"
   >
     Copiar link
   </button>
@@ -794,7 +794,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
   <button
     onClick={() => enviarWhatsApp(item.telefono, item.codigo, item.nombre)}
     disabled={!item.telefono}
-    className="px-3 py-2 rounded-full bg-green-50 text-green-700 text-xs font-semibold hover:bg-green-100 transition disabled:opacity-40 disabled:cursor-not-allowed"
+    className="px-3 py-2 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold hover:bg-green-100 transition disabled:opacity-40 disabled:cursor-not-allowed"
   >
     WhatsApp
   </button>
@@ -803,7 +803,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 <td className="p-3">
   <button
     onClick={() => iniciarConfirmacionManual(item)}
-    className="px-3 py-2 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold hover:bg-blue-100 transition"
+    className="px-3 py-2 rounded-full bg-[#F4EFE7] text-[#3A0F12] border border-[#B08D57]/30 text-xs font-semibold hover:bg-[#EBDCC5] transition"
   >
     Confirmar
   </button>
@@ -812,7 +812,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 <td className="p-3">
   <button
     onClick={() => iniciarEdicion(item)}
-    className="px-3 py-2 rounded-full bg-yellow-50 text-yellow-700 text-xs font-semibold hover:bg-yellow-100 transition"
+    className="px-3 py-2 rounded-full bg-[#FBF4E8] text-[#8A681F] border border-[#D8B76D]/40 text-xs font-semibold hover:bg-[#F1E1C8] transition"
   >
     Editar
   </button>
@@ -841,12 +841,12 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 
 {confirmandoCodigo && (
   <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
-    <div className="bg-white rounded-[28px] shadow-xl p-6 w-full max-w-lg">
-      <h3 className="text-2xl font-bold text-[#FF3471] mb-2">
+    <div className="bg-[#FFF9F0] border border-[#B08D57]/25 rounded-[28px] shadow-xl p-6 w-full max-w-lg">
+      <h3 className="text-2xl font-bold text-[#6E171A] mb-2">
         Confirmación manual
       </h3>
 
-      <p className="text-sm text-gray-500 mb-5">
+      <p className="text-sm text-[#78675E] mb-5">
         Invitado: <strong>{confirmandoNombre}</strong>
         <br />
         Código: <strong>{confirmandoCodigo}</strong>
@@ -856,7 +856,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 
       <div className="space-y-4">
         <div>
-          <label className="block text-sm font-semibold text-[#9b355e] mb-1">
+          <label className="block text-sm font-semibold text-[#6E171A] mb-1">
             Asistencia
           </label>
 
@@ -866,7 +866,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
               setConfirmandoAsistencia(e.target.value);
               setConfirmandoCantidad(e.target.value === "No asistiré" ? 0 : 1);
             }}
-            className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30"
+            className="w-full border border-[#B08D57]/45 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#B08D57]/30"
           >
             <option>Sí asistiré</option>
             <option>No asistiré</option>
@@ -874,7 +874,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-[#9b355e] mb-1">
+          <label className="block text-sm font-semibold text-[#6E171A] mb-1">
             Cantidad confirmada
           </label>
 
@@ -882,7 +882,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
             value={confirmandoCantidad}
             onChange={(e) => setConfirmandoCantidad(Number(e.target.value))}
             disabled={confirmandoAsistencia === "No asistiré"}
-            className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30 disabled:bg-gray-100"
+            className="w-full border border-[#B08D57]/45 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#B08D57]/30 disabled:bg-gray-100"
           >
             {confirmandoAsistencia === "No asistiré" ? (
               <option value={0}>0</option>
@@ -902,7 +902,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
       <div className="flex gap-3 mt-6">
         <button
           onClick={cancelarConfirmacionManual}
-          className="flex-1 px-5 py-3 rounded-full border border-gray-300 text-gray-600 font-semibold hover:bg-gray-50 transition"
+          className="flex-1 px-5 py-3 rounded-full border border-gray-300 text-[#5A4A42] font-semibold hover:bg-gray-50 transition"
         >
           Cancelar
         </button>
@@ -910,7 +910,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
         <button
           onClick={guardarConfirmacionManual}
           disabled={guardandoConfirmacion}
-          className="flex-1 px-5 py-3 rounded-full bg-[#FF3471] text-white font-semibold hover:bg-[#FEA201] transition disabled:opacity-60"
+          className="flex-1 px-5 py-3 rounded-full bg-[#6E171A] text-white font-semibold hover:bg-[#B08D57] transition disabled:opacity-60"
         >
           {guardandoConfirmacion ? "Guardando..." : "Guardar"}
         </button>
@@ -923,18 +923,18 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 
 {creandoInvitado && (
   <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
-    <div className="bg-white rounded-[28px] shadow-xl p-6 w-full max-w-lg">
-      <h3 className="text-2xl font-bold text-[#FF3471] mb-2">
+    <div className="bg-[#FFF9F0] border border-[#B08D57]/25 rounded-[28px] shadow-xl p-6 w-full max-w-lg">
+      <h3 className="text-2xl font-bold text-[#6E171A] mb-2">
         Nuevo invitado
       </h3>
 
-      <p className="text-sm text-gray-500 mb-5">
+      <p className="text-sm text-[#78675E] mb-5">
         Captura los datos del nuevo invitado.
       </p>
 
       <div className="space-y-4">
         <div>
-          <label className="block text-sm font-semibold text-[#9b355e] mb-1">
+          <label className="block text-sm font-semibold text-[#6E171A] mb-1">
             Código
           </label>
           <input
@@ -942,12 +942,12 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
             value={nuevoCodigo}
             onChange={(e) => setNuevoCodigo(e.target.value)}
             placeholder="Ej. A010"
-            className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30"
+            className="w-full border border-[#B08D57]/45 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#B08D57]/30"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-[#9b355e] mb-1">
+          <label className="block text-sm font-semibold text-[#6E171A] mb-1">
             Nombre
           </label>
           <input
@@ -955,12 +955,12 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
             value={nuevoNombre}
             onChange={(e) => setNuevoNombre(e.target.value)}
             placeholder="Ej. Familia Pérez"
-            className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30"
+            className="w-full border border-[#B08D57]/45 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#B08D57]/30"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-[#9b355e] mb-1">
+          <label className="block text-sm font-semibold text-[#6E171A] mb-1">
             Pases
           </label>
           <input
@@ -968,12 +968,12 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
             min={1}
             value={nuevoPases}
             onChange={(e) => setNuevoPases(Number(e.target.value))}
-            className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30"
+            className="w-full border border-[#B08D57]/45 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#B08D57]/30"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-[#9b355e] mb-1">
+          <label className="block text-sm font-semibold text-[#6E171A] mb-1">
             Teléfono
           </label>
           <input
@@ -981,12 +981,12 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
             value={nuevoTelefono}
             onChange={(e) => setNuevoTelefono(e.target.value)}
             placeholder="Ej. 6861234567"
-            className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30"
+            className="w-full border border-[#B08D57]/45 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#B08D57]/30"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-[#9b355e] mb-1">
+          <label className="block text-sm font-semibold text-[#6E171A] mb-1">
             Grupo
           </label>
           <input
@@ -994,7 +994,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
             value={nuevoGrupo}
             onChange={(e) => setNuevoGrupo(e.target.value)}
             placeholder="Ej. Familia mamá"
-            className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30"
+            className="w-full border border-[#B08D57]/45 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#B08D57]/30"
           />
         </div>
       </div>
@@ -1002,7 +1002,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
       <div className="flex gap-3 mt-6">
         <button
           onClick={() => setCreandoInvitado(false)}
-          className="flex-1 px-5 py-3 rounded-full border border-gray-300 text-gray-600 font-semibold hover:bg-gray-50 transition"
+          className="flex-1 px-5 py-3 rounded-full border border-gray-300 text-[#5A4A42] font-semibold hover:bg-gray-50 transition"
         >
           Cancelar
         </button>
@@ -1010,7 +1010,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
         <button
           onClick={guardarNuevoInvitado}
           disabled={guardandoNuevo}
-          className="flex-1 px-5 py-3 rounded-full bg-[#FF3471] text-white font-semibold hover:bg-[#FEA201] transition disabled:opacity-60"
+          className="flex-1 px-5 py-3 rounded-full bg-[#6E171A] text-white font-semibold hover:bg-[#B08D57] transition disabled:opacity-60"
         >
           {guardandoNuevo ? "Guardando..." : "Guardar"}
         </button>
@@ -1022,30 +1022,30 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
 
 {editandoCodigo && (
   <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
-    <div className="bg-white rounded-[28px] shadow-xl p-6 w-full max-w-lg">
-      <h3 className="text-2xl font-bold text-[#FF3471] mb-2">
+    <div className="bg-[#FFF9F0] border border-[#B08D57]/25 rounded-[28px] shadow-xl p-6 w-full max-w-lg">
+      <h3 className="text-2xl font-bold text-[#6E171A] mb-2">
         Editar invitado
       </h3>
 
-      <p className="text-sm text-gray-500 mb-5">
+      <p className="text-sm text-[#78675E] mb-5">
         Código: <strong>{editandoCodigo}</strong>
       </p>
 
       <div className="space-y-4">
         <div>
-          <label className="block text-sm font-semibold text-[#9b355e] mb-1">
+          <label className="block text-sm font-semibold text-[#6E171A] mb-1">
             Nombre
           </label>
           <input
             type="text"
             value={editandoNombre}
             onChange={(e) => setEditandoNombre(e.target.value)}
-            className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30"
+            className="w-full border border-[#B08D57]/45 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#B08D57]/30"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-[#9b355e] mb-1">
+          <label className="block text-sm font-semibold text-[#6E171A] mb-1">
             Pases
           </label>
           <input
@@ -1053,31 +1053,31 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
             min={1}
             value={editandoPases}
             onChange={(e) => setEditandoPases(Number(e.target.value))}
-            className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30"
+            className="w-full border border-[#B08D57]/45 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#B08D57]/30"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-[#9b355e] mb-1">
+          <label className="block text-sm font-semibold text-[#6E171A] mb-1">
             Teléfono
           </label>
           <input
             type="text"
             value={editandoTelefono}
             onChange={(e) => setEditandoTelefono(e.target.value)}
-            className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30"
+            className="w-full border border-[#B08D57]/45 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#B08D57]/30"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-[#9b355e] mb-1">
+          <label className="block text-sm font-semibold text-[#6E171A] mb-1">
             Grupo
           </label>
           <input
             type="text"
             value={editandoGrupo}
             onChange={(e) => setEditandoGrupo(e.target.value)}
-            className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30"
+            className="w-full border border-[#B08D57]/45 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#B08D57]/30"
           />
         </div>
       </div>
@@ -1085,7 +1085,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
       <div className="flex gap-3 mt-6">
         <button
           onClick={cancelarEdicion}
-          className="flex-1 px-5 py-3 rounded-full border border-gray-300 text-gray-600 font-semibold hover:bg-gray-50 transition"
+          className="flex-1 px-5 py-3 rounded-full border border-gray-300 text-[#5A4A42] font-semibold hover:bg-gray-50 transition"
         >
           Cancelar
         </button>
@@ -1093,7 +1093,7 @@ Agradecemos tu respuesta a más tardar el ${evento.rsvp.fechaLimite}.`;
         <button
           onClick={guardarEdicion}
           disabled={guardandoEdicion}
-          className="flex-1 px-5 py-3 rounded-full bg-[#FF3471] text-white font-semibold hover:bg-[#FEA201] transition disabled:opacity-60"
+          className="flex-1 px-5 py-3 rounded-full bg-[#6E171A] text-white font-semibold hover:bg-[#B08D57] transition disabled:opacity-60"
         >
           {guardandoEdicion ? "Guardando..." : "Guardar"}
         </button>

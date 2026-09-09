@@ -85,30 +85,30 @@ export default function ImportarInvitadosPage() {
 
   return (
   <AdminPasswordGate>
-    <main className="min-h-screen bg-[#fff8fb] text-[#4b2433] p-6">
-      <div className="max-w-5xl mx-auto bg-white rounded-[32px] shadow-lg p-6 md:p-8">
-        <p className="uppercase tracking-[0.3em] text-xs text-[#9b355e] mb-2">
-          XV Sandra Alicia
+    <main className="min-h-screen bg-[#F7EFE3] text-[#241B18] p-6">
+      <div className="max-w-5xl mx-auto bg-[#FFF9F0] border border-[#B08D57]/20 rounded-[32px] shadow-lg p-6 md:p-8">
+        <p className="uppercase tracking-[0.3em] text-xs text-[#6E171A] mb-2">
+          XV Zoé
         </p>
 
-        <h1 className="text-3xl md:text-5xl font-bold text-[#FF3471] mb-4">
+        <h1 className="text-3xl md:text-5xl font-bold text-[#6E171A] mb-4">
           Importar invitados
         </h1>
 
-        <p className="text-gray-600 mb-8">
+        <p className="text-[#5A4A42] mb-8">
           Sube la plantilla Excel para crear automáticamente los invitados en Firebase.
         </p>
 
-        <div className="border-2 border-dashed border-pink-200 rounded-3xl p-6 text-center mb-6">
+        <div className="border-2 border-dashed border-[#B08D57]/55 bg-[#FBF4E8] rounded-3xl p-6 text-center mb-6">
           <input
             type="file"
             accept=".xlsx,.xls"
             onChange={leerExcel}
-            className="block w-full text-sm text-gray-600"
+            className="block w-full text-sm text-[#5A4A42]"
           />
 
           {archivoNombre && (
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-sm text-[#78675E]">
               Archivo seleccionado: <strong>{archivoNombre}</strong>
             </p>
           )}
@@ -116,8 +116,8 @@ export default function ImportarInvitadosPage() {
 
         {invitados.length > 0 && (
           <>
-            <div className="bg-pink-50 rounded-2xl p-4 mb-6">
-              <p className="font-semibold text-[#FF3471]">
+            <div className="bg-[#FBF4E8] rounded-2xl p-4 mb-6">
+              <p className="font-semibold text-[#6E171A]">
                 Invitados detectados: {invitados.length}
               </p>
             </div>
@@ -125,7 +125,7 @@ export default function ImportarInvitadosPage() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm border-collapse">
                 <thead>
-                  <tr className="bg-[#FF3471] text-white">
+                  <tr className="bg-[#3A0F12] text-[#FFF9F0] border-b-2 border-[#B08D57]">
                     <th className="p-3 text-left">Código</th>
                     <th className="p-3 text-left">Nombre</th>
                     <th className="p-3 text-left">Pases</th>
@@ -151,7 +151,7 @@ export default function ImportarInvitadosPage() {
             <button
               onClick={importarAFirebase}
               disabled={importando}
-              className="bg-[#FF3471] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#FEA201] transition disabled:opacity-60"
+              className="bg-[#6E171A] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#3A0F12] transition disabled:opacity-60"
             >
               {importando ? "Importando..." : "Importar a Firebase"}
             </button>
@@ -159,7 +159,7 @@ export default function ImportarInvitadosPage() {
         )}
 
         {mensaje && (
-          <div className="mt-6 bg-pink-50 border border-pink-200 rounded-2xl p-4">
+          <div className="mt-6 bg-[#FBF4E8] border border-[#B08D57]/45 rounded-2xl p-4">
             {mensaje}
           </div>
         )}
