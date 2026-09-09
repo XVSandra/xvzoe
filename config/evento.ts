@@ -30,7 +30,7 @@ export const evento = {
 
     padrinos: [
       "Rocío Ruiz Paredes",
-      "Lennin Hansmann Vasquez",
+      "Lennin Hansmann Vazquez",
     ],
   },
 
