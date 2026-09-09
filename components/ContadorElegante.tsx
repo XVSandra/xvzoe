@@ -54,28 +54,28 @@ export default function ContadorElegante() {
   return (
     <div className="text-center relative z-10">
       <h2
-        className="text-3xl md:text-4xl font-bold text-[#7B4BA3] mb-8"
-        style={{ fontFamily: "'Quicksand', sans-serif" }}
+        className="text-3xl md:text-4xl font-semibold text-[#6E171A] mb-8"
+        style={{ fontFamily: "'Cormorant Garamond', serif" }}
       >
-        ¡Prepárate!
+        La noche se acerca
       </h2>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
         {items.map((item) => (
           <div
             key={item.label}
-            className="bg-white/85 backdrop-blur-md rounded-3xl shadow-lg border border-[#E8C45C]/50 px-4 py-6"
+            className="relative overflow-hidden bg-[#FBF3E4]/90 backdrop-blur-md rounded-2xl shadow-lg border border-[#A98342]/45 px-4 py-6"
           >
             <p
-              className="text-4xl md:text-5xl font-bold text-[#B78A25]"
-              style={{ fontFamily: "'Quicksand', sans-serif" }}
+              className="text-4xl md:text-5xl font-semibold text-[#9A7437]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               {String(item.value).padStart(2, "0")}
             </p>
 
             <p
-              className="text-lg md:text-xl text-[#4B3561] font-semibold mt-2"
-              style={{ fontFamily: "'Quicksand', sans-serif" }}
+              className="text-base md:text-lg uppercase tracking-[0.12em] text-[#6E171A] font-semibold mt-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               {item.label}
             </p>

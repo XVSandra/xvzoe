@@ -2,6 +2,8 @@
 
 import { evento } from "@/config/evento";
 import "@fontsource/great-vibes";
+import "@fontsource/cormorant-garamond/500.css";
+import "@fontsource/cormorant-garamond/600.css";
 import "@fontsource/quicksand/400.css";
 import "@fontsource/quicksand/500.css";
 import "@fontsource/quicksand/600.css";
@@ -134,470 +136,744 @@ catch (error: any) {
 
   return (
     <div
-      className="relative text-[#4B3561] text-lg md:text-xl font-medium scroll-smooth overflow-hidden min-h-screen bg-gradient-to-b from-[#FFF7EC] via-[#F7E9FF] to-[#FFF7EC]"
+      className="relative text-[#241B18] text-lg md:text-xl font-medium scroll-smooth overflow-hidden min-h-screen bg-gradient-to-b from-[#F5E9D5] via-[#FBF4E8] to-[#E8D6BC]"
       style={{ fontFamily: "'Quicksand', sans-serif" }}
     >
       <div className="absolute inset-0 pointer-events-none z-0">
         <img
           src="/images/flores-orilla.png"
           alt="Decoración floral"
-          className="w-full h-full object-cover opacity-15"
+          className="w-full h-full object-cover opacity-[0.07] grayscale"
         />
       </div>
 
       <Toaster position="top-center" reverseOrder={false} />
 
       <button
-        className="fixed top-4 right-4 bg-[#E8C45C] text-[#4B3561] rounded-full shadow-lg p-3 z-50 hover:bg-[#7B4BA3] hover:text-white transition"
+        className="fixed top-3 right-3 w-10 h-10 md:top-4 md:right-4 md:w-12 md:h-12 flex items-center justify-center bg-[#B08D57]/95 text-[#241B18] rounded-full border border-[#E7C77B]/60 shadow-lg z-50 hover:bg-[#6E171A] hover:text-white transition"
         onClick={toggleMusica}
+        aria-label={sonando ? "Pausar música" : "Reproducir música"}
+        title={sonando ? "Pausar música" : "Reproducir música"}
       >
-        {sonando ? "⏸️" : "▶️"}
+        <span className="text-sm md:text-base">{sonando ? "Ⅱ" : "▶"}</span>
       </button>
 
-      <section
-  className="min-h-screen bg-cover bg-[center_top] justify-between items-center text-white p-6 relative"
-  style={{ backgroundImage: "url('/images/portada.jpg')" }}
->
-  <div className="absolute inset-0 bg-gradient-to-b from-[#2B1746]/45 via-[#7B4BA3]/20 to-[#2B1746]/65"></div>
+   <section className="relative w-full bg-[#14090A] overflow-hidden">
+  <img
+    src="/images/portada-zoe.png"
+    alt="Invitación de XV años de Zoé"
+    className="block w-full h-auto md:w-auto md:h-screen md:max-w-full md:mx-auto object-contain"
+  />
+</section>
 
-        <div className="relative w-full flex flex-col justify-between items-center min-h-screen py-10">
-          <div className="text-center mt-10" data-aos="fade-down">
-            <h1
-              className="text-6xl md:text-8xl font-normal drop-shadow-lg text-[#F8E7A1]"
-              style={{ fontFamily: "'Great Vibes', cursive" }}
-            >
-              Mis XV Años
-            </h1>
-          </div>
-<div className="text-center mb-12" data-aos="fade-up">
-  <p className="uppercase tracking-[0.32em] text-base md:text-xl text-[#FFF7EC]/90 mb-4 font-semibold">
-    {evento.fecha.texto}
-  </p>
-
-  <h2
-    className="text-6xl md:text-9xl drop-shadow-lg text-[#F8E7A1]"
-    style={{ fontFamily: "'Great Vibes', cursive" }}
-  >
-   {evento.nombre}
-  </h2>
-
-  <div className="mt-4 w-28 h-1 mx-auto rounded-full bg-[#F8E7A1]"></div>
-</div>
-        </div>
-      </section>
-
-    <section
-  className="relative overflow-hidden bg-white/90 shadow-xl rounded-[36px] ring-1 ring-purple-100 my-16 mx-4 md:mx-16 text-center py-16 px-6"
+<section
+  className="relative overflow-hidden my-16 mx-4 md:mx-16 text-center"
   data-aos="zoom-in"
 >
-  {/* Decoración suave superior */}
-  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-[#B78A25] to-transparent" />
+  <div
+    className="
+      relative
+      max-w-4xl
+      mx-auto
+      bg-[#F6E8D1]/95
+      border
+      border-[#A98342]/50
+      shadow-2xl
+      px-7
+      py-16
+      md:px-14
+      md:py-20
+    "
+  >
+    {/* Marco interior */}
+    <div className="absolute inset-3 border border-[#A98342]/25 pointer-events-none" />
 
-  <div className="max-w-4xl mx-auto">
-    <div className="flex justify-center mb-6">
-      <img
-        src="/images/crown.png"
-        alt="Corona decorativa"
-        className="w-80 md:w-96 h-auto drop-shadow-md"
-      />
+    {/* Ornamento superior */}
+    <div className="relative z-10 flex items-center justify-center gap-4 mb-10">
+      <span className="h-px w-16 md:w-28 bg-[#9A7437]/60" />
+      <span className="text-[#9A7437] text-2xl">❦</span>
+      <span className="text-[#6E171A] text-lg">✦</span>
+      <span className="text-[#9A7437] text-2xl">❦</span>
+      <span className="h-px w-16 md:w-28 bg-[#9A7437]/60" />
     </div>
 
-    <div className="flex items-center justify-center gap-4 mb-8">
-      <span className="h-px w-16 md:w-28 bg-[#B78A25]/60" />
-      <span className="text-[#B78A25] text-2xl">✦</span>
-      <span className="h-px w-16 md:w-28 bg-[#B78A25]/60" />
-    </div>
-
+    {/* Texto principal */}
     <p
-      className="font-['Great_Vibes'] text-4xl md:text-6xl text-[#7B4BA3] leading-tight max-w-3xl mx-auto"
+      className="
+        relative
+        z-10
+        text-4xl
+        sm:text-5xl
+        md:text-7xl
+        text-[#6E171A]
+        leading-tight
+      "
+      style={{ fontFamily: "'Great Vibes', cursive" }}
     >
-      Cada farol ilumina un sueño,
+      Una noche detrás de la máscara,
       <br />
-      cada sueño un nuevo comienzo.
+      un recuerdo para toda la vida.
     </p>
 
-    <p className="mt-6 text-lg md:text-2xl text-[#6B5A75] leading-relaxed max-w-3xl mx-auto italic">
-      Acompáñame a celebrar la noche en que mi luz brillará más que nunca.
+    {/* Texto secundario */}
+    <p
+      className="
+        relative
+        z-10
+        mt-8
+        text-lg
+        md:text-2xl
+        text-[#493B34]
+        leading-relaxed
+        max-w-2xl
+        mx-auto
+      "
+      style={{ fontFamily: "'Cormorant Garamond', serif" }}
+    >
+      Hay momentos que se convierten en recuerdos para siempre.
+      <br className="hidden md:block" />
+      Gracias por formar parte de uno de los más especiales de mi vida.
     </p>
 
-    <div className="flex items-center justify-center gap-4 mt-10">
-      <span className="h-px w-16 md:w-28 bg-[#B78A25]/60" />
-      <span className="text-[#B78A25] text-2xl">✦</span>
-      <span className="h-px w-16 md:w-28 bg-[#B78A25]/60" />
+    {/* Detalle */}
+    <div
+      className="
+        relative
+        z-10
+        mt-10
+        uppercase
+        tracking-[0.28em]
+        text-sm
+        md:text-base
+        text-[#9A7437]
+        font-semibold
+      "
+      style={{ fontFamily: "'Cormorant Garamond', serif" }}
+    >
+      XV años · Elegancia · Misterio · Celebración
     </div>
+
+    {/* Ornamento inferior */}
+    <div className="relative z-10 flex items-center justify-center gap-4 mt-10">
+      <span className="h-px w-16 md:w-28 bg-[#9A7437]/60" />
+      <span className="text-[#9A7437] text-2xl">❦</span>
+      <span className="text-[#6E171A] text-lg">✦</span>
+      <span className="text-[#9A7437] text-2xl">❦</span>
+      <span className="h-px w-16 md:w-28 bg-[#9A7437]/60" />
+    </div>
+
+    {/* Decoraciones de esquina */}
+    <div className="absolute top-5 left-6 text-[#9A7437]/50 text-4xl">❧</div>
+    <div className="absolute top-5 right-6 text-[#9A7437]/50 text-4xl scale-x-[-1]">❧</div>
+    <div className="absolute bottom-5 left-6 text-[#9A7437]/50 text-4xl rotate-180">❧</div>
+    <div className="absolute bottom-5 right-6 text-[#9A7437]/50 text-4xl rotate-180 scale-x-[-1]">❧</div>
   </div>
 </section>
 <section
-  className="text-center py-16 px-6 relative z-10"
+  className="relative py-20 md:py-24 px-4 md:px-6 text-center z-10 overflow-hidden"
   data-aos="fade-up"
 >
-  <div className="max-w-4xl mx-auto rounded-[2rem] bg-white/75 backdrop-blur-md border border-[#E8C45C]/50 shadow-xl px-6 py-12 md:px-12">
+  <div className="relative max-w-4xl mx-auto bg-[#F6E8D1]/95 border border-[#A98342]/50 shadow-2xl px-6 py-14 md:px-14 md:py-16">
+    {/* Marco interior */}
+    <div className="absolute inset-3 border border-[#A98342]/25 pointer-events-none" />
 
-    <p
-      className="uppercase tracking-[0.35em] text-[#B78A25] text-sm md:text-base font-bold mb-4"
-      style={{ fontFamily: "'Quicksand', sans-serif" }}
-    >
-      Reserva la fecha
-    </p>
+    {/* Esquinas */}
+    <div className="absolute top-5 left-6 text-[#9A7437]/45 text-4xl">❧</div>
+    <div className="absolute top-5 right-6 text-[#9A7437]/45 text-4xl scale-x-[-1]">❧</div>
+    <div className="absolute bottom-5 left-6 text-[#9A7437]/45 text-4xl rotate-180">❧</div>
+    <div className="absolute bottom-5 right-6 text-[#9A7437]/45 text-4xl rotate-180 scale-x-[-1]">❧</div>
 
-    <div className="w-24 h-1 bg-[#E8C45C] rounded-full mx-auto mb-6"></div>
+    <div className="relative z-10">
+      {/* Ornamento */}
+      <div className="flex items-center justify-center gap-4 mb-7">
+        <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+        <span className="text-[#9A7437] text-2xl">❦</span>
+        <span className="text-[#6E171A] text-lg">✦</span>
+        <span className="text-[#9A7437] text-2xl">❦</span>
+        <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+      </div>
 
+      <p
+        className="uppercase tracking-[0.38em] text-[#9A7437] text-xs md:text-sm font-semibold mb-7"
+        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+      >
+        Reserva la fecha
+      </p>
+
+      {/* Fecha */}
+      <div className="flex flex-col items-center">
+        <span
+          className="text-[64px] sm:text-[76px] md:text-[108px] leading-[0.82] text-[#6E171A] font-semibold"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          {evento.fecha.dia}
+        </span>
+
+        <span
+          className="mt-4 text-4xl sm:text-5xl md:text-6xl text-[#6E171A] capitalize"
+          style={{ fontFamily: "'Great Vibes', cursive" }}
+        >
+          de {evento.fecha.mes}
+        </span>
+
+        <div className="flex items-center justify-center gap-4 my-5">
+          <span className="h-px w-12 md:w-20 bg-[#9A7437]/55" />
+          <span className="text-[#9A7437] text-base">✦</span>
+          <span className="h-px w-12 md:w-20 bg-[#9A7437]/55" />
+        </div>
+
+        <span
+          className="text-3xl md:text-4xl tracking-[0.28em] text-[#9A7437] font-semibold"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          {evento.fecha.anio}
+        </span>
+      </div>
+
+      <p
+        className="mt-9 text-3xl sm:text-4xl md:text-6xl text-[#6E171A] leading-tight"
+        style={{ fontFamily: "'Great Vibes', cursive" }}
+      >
+        Una noche de máscaras, elegancia
+        <br className="hidden md:block" />
+        y recuerdos para siempre
+      </p>
+
+      {/* Separador antes del contador */}
+      <div className="flex items-center justify-center gap-4 mt-10 mb-4">
+        <span className="h-px w-14 md:w-28 bg-[#9A7437]/45" />
+        <span className="text-[#9A7437] text-xl">❦</span>
+        <span className="h-px w-14 md:w-28 bg-[#9A7437]/45" />
+      </div>
+
+      <ContadorElegante />
+
+      <div className="flex items-center justify-center gap-4 mt-9">
+        <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+        <span className="text-[#9A7437] text-xl">❦</span>
+        <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  className="relative py-24 px-6 bg-gradient-to-b from-[#16090A] via-[#3A0F12] to-[#16090A] text-[#F8EBD3] text-center overflow-hidden z-10"
+  data-aos="fade-up"
+>
+  {/* Resplandor central */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(176,141,87,0.12),transparent_60%)] pointer-events-none" />
+
+  {/* Marco exterior */}
+  <div className="absolute inset-5 md:inset-10 border border-[#B08D57]/35 pointer-events-none" />
+
+  {/* Esquinas decorativas */}
+  <div className="absolute top-6 left-5 md:top-8 md:left-8 text-[#B08D57]/40 text-3xl md:text-5xl">❦</div>
+  <div className="absolute top-6 right-5 md:top-8 md:right-8 text-[#B08D57]/40 text-3xl md:text-5xl scale-x-[-1]">❦</div>
+  <div className="absolute bottom-6 left-5 md:bottom-8 md:left-8 text-[#B08D57]/40 text-3xl md:text-5xl rotate-180">❦</div>
+  <div className="absolute bottom-6 right-5 md:bottom-8 md:right-8 text-[#B08D57]/40 text-3xl md:text-5xl rotate-180 scale-x-[-1]">❦</div>
+
+  <div className="relative z-10 max-w-4xl mx-auto">
+
+    {/* Ornamento superior */}
+    <div className="flex items-center justify-center gap-4 mb-8">
+      <span className="h-px w-14 md:w-24 bg-[#B08D57]/60" />
+      <span className="text-[#D8B76D] text-2xl">❦</span>
+      <span className="text-[#8A1F24] text-lg">✦</span>
+      <span className="text-[#D8B76D] text-2xl">❦</span>
+      <span className="h-px w-14 md:w-24 bg-[#B08D57]/60" />
+    </div>
+
+    {/* Título */}
     <h2
-      className="text-[52px] md:text-[88px] text-[#7B4BA3] leading-none font-bold"
-      style={{ fontFamily: "'Quicksand', sans-serif" }}
+      className="text-5xl md:text-7xl font-normal text-[#E7C77B] mb-5"
+      style={{ fontFamily: "'Great Vibes', cursive" }}
     >
-      15 de agosto
+      Con mucho amor me acompañan
     </h2>
 
     <p
-      className="text-[46px] md:text-[76px] text-[#B78A25] leading-none font-bold mt-2"
-      style={{ fontFamily: "'Quicksand', sans-serif" }}
+      className="text-lg md:text-2xl text-[#E8D9C4] max-w-2xl mx-auto mb-14 leading-relaxed"
+      style={{ fontFamily: "'Cormorant Garamond', serif" }}
     >
-      2026
+      Quienes han llenado mi vida de amor, guía y recuerdos,
+      hoy están conmigo en esta noche tan especial.
     </p>
 
- 
-    <div className="w-24 h-1 bg-[#E8C45C] rounded-full mx-auto mt-8 mb-10"></div>
+    <div className="grid md:grid-cols-2 gap-10 md:gap-14">
 
-   <div className="mb-10">
-  <div className="flex items-center justify-center gap-4 mb-5">
-    <span className="h-px w-14 md:w-24 bg-[#B78A25]/60" />
-    <span className="text-[#B78A25] text-xl">✦</span>
-    <span className="h-px w-14 md:w-24 bg-[#B78A25]/60" />
-  </div>
+      {/* Padres */}
+      <div
+        className="relative bg-black/20 border border-[#B08D57]/30 px-6 py-10 shadow-xl"
+        data-aos="fade-right"
+      >
+        <div className="absolute inset-2 border border-[#B08D57]/15 pointer-events-none" />
 
-  <p
-    className="text-4xl md:text-6xl text-[#7B4BA3] leading-tight"
-    style={{ fontFamily: "'Great Vibes', cursive" }}
-  >
-    El mejor viaje comienza cuando te atreves
-    <br />
-    a dar el primer paso
-  </p>
-</div>
+        <p
+          className="relative z-10 uppercase tracking-[0.28em] text-[#D8B76D] text-sm md:text-base font-semibold mb-5"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          Mis Padres
+        </p>
 
-<ContadorElegante />
+        <div className="relative z-10 flex items-center justify-center gap-3 mb-6">
+          <span className="h-px w-12 bg-[#B08D57]/60" />
+          <span className="text-[#B08D57]">✦</span>
+          <span className="h-px w-12 bg-[#B08D57]/60" />
+        </div>
+
+        <div
+          className="relative z-10 space-y-3 text-xl md:text-2xl text-[#FFF4E3]"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          {evento.familia.padres.map((nombre) => (
+            <p key={nombre}>{nombre}</p>
+          ))}
+        </div>
+      </div>
+
+      {/* Padrinos */}
+      <div
+        className="relative bg-black/20 border border-[#B08D57]/30 px-6 py-10 shadow-xl"
+        data-aos="fade-left"
+      >
+        <div className="absolute inset-2 border border-[#B08D57]/15 pointer-events-none" />
+
+        <p
+          className="relative z-10 uppercase tracking-[0.28em] text-[#D8B76D] text-sm md:text-base font-semibold mb-5"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          Mis Padrinos
+        </p>
+
+        <div className="relative z-10 flex items-center justify-center gap-3 mb-6">
+          <span className="h-px w-12 bg-[#B08D57]/60" />
+          <span className="text-[#B08D57]">✦</span>
+          <span className="h-px w-12 bg-[#B08D57]/60" />
+        </div>
+
+        <div
+          className="relative z-10 space-y-3 text-xl md:text-2xl text-[#FFF4E3]"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          {evento.familia.padrinos.map((nombre) => (
+            <p key={nombre}>{nombre}</p>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+    {/* Mensaje final */}
+    <p
+      className="mt-14 text-4xl md:text-6xl text-[#E7C77B] leading-tight"
+      style={{ fontFamily: "'Great Vibes', cursive" }}
+      data-aos="fade-up"
+    >
+      Gracias por ser parte de mi historia
+      <br />
+      y acompañarme en esta noche inolvidable.
+    </p>
+
+    {/* Ornamento inferior */}
+    <div className="flex items-center justify-center gap-4 mt-10">
+      <span className="h-px w-14 md:w-24 bg-[#B08D57]/60" />
+      <span className="text-[#D8B76D] text-2xl">❦</span>
+      <span className="text-[#8A1F24] text-lg">✦</span>
+      <span className="text-[#D8B76D] text-2xl">❦</span>
+      <span className="h-px w-14 md:w-24 bg-[#B08D57]/60" />
+    </div>
+
   </div>
 </section>
 
-      <section className="relative py-20 bg-[#6F3FA0] text-white text-center overflow-hidden z-10">
-        <div className="absolute top-0 left-0 w-full z-20 pointer-events-none">
-          <svg
-            viewBox="0 0 1440 320"
-            className="w-full h-[80px]"
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="#5A2E82"
-              d="M0,64L48,74.7C96,85,192,107,288,122.7C384,139,480,149,576,138.7C672,128,768,96,864,85.3C960,75,1056,85,1152,106.7C1248,128,1344,160,1392,176L1440,192L1440,0L0,0Z"
-            />
-          </svg>
+   <section
+  className="relative py-20 md:py-24 px-4 md:px-6 text-center z-10 overflow-hidden"
+  data-aos="fade-up"
+>
+  <div className="max-w-5xl mx-auto">
+
+    {/* Encabezado */}
+    <div className="flex items-center justify-center gap-4 mb-5">
+      <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+      <span className="text-[#9A7437] text-2xl">❦</span>
+      <span className="text-[#6E171A] text-lg">✦</span>
+      <span className="text-[#9A7437] text-2xl">❦</span>
+      <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+    </div>
+
+    <h2
+      className="text-5xl sm:text-6xl md:text-7xl text-[#6E171A] mb-4 font-normal"
+      style={{ fontFamily: "'Great Vibes', cursive" }}
+    >
+      Detalles del Evento
+    </h2>
+
+    <p
+      className="text-lg md:text-2xl text-[#493B34] max-w-2xl mx-auto mb-14"
+      style={{ fontFamily: "'Cormorant Garamond', serif" }}
+    >
+      Todo está preparado para compartir una noche inolvidable.
+    </p>
+
+    {/* Tarjeta principal */}
+    <div className="relative bg-[#FBF3E4]/95 border border-[#A98342]/45 shadow-2xl px-6 py-12 md:px-12">
+
+      <div className="absolute inset-3 border border-[#A98342]/20 pointer-events-none" />
+
+      <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+
+        {/* Información */}
+        <div className="space-y-10 text-center md:text-left">
+
+          {/* Fecha */}
+          <div>
+            <p
+              className="uppercase tracking-[0.25em] text-[#9A7437] text-sm font-semibold mb-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Fecha y hora
+            </p>
+
+            <p
+              className="text-3xl md:text-4xl text-[#6E171A]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              {evento.fecha.texto}
+            </p>
+
+            <p
+              className="text-xl md:text-2xl text-[#493B34]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              7:00 pm
+            </p>
+          </div>
+
+          {/* Lugar */}
+          <div>
+            <p
+              className="uppercase tracking-[0.25em] text-[#9A7437] text-sm font-semibold mb-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Lugar
+            </p>
+
+            <p
+              className="text-3xl md:text-4xl text-[#6E171A]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              {evento.lugar.nombre}
+            </p>
+
+            <p
+              className="mt-2 text-lg md:text-xl text-[#493B34]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              {evento.lugar.direccion}
+            </p>
+
+            <a
+              href={evento.lugar.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-5 px-7 py-3 border border-[#9A7437] bg-[#6E171A] text-[#FFF4E3] uppercase tracking-[0.16em] text-sm font-semibold hover:bg-[#9A7437] transition"
+            >
+              Ver ubicación
+            </a>
+          </div>
+
+          {/* Vestimenta */}
+          <div>
+            <p
+              className="uppercase tracking-[0.25em] text-[#9A7437] text-sm font-semibold mb-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Código de vestimenta
+            </p>
+
+            <p
+              className="text-3xl text-[#6E171A]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Formal
+            </p>
+          </div>
+
+          {/* Obsequios */}
+          <div>
+            <p
+              className="uppercase tracking-[0.25em] text-[#9A7437] text-sm font-semibold mb-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Obsequios
+            </p>
+
+            <p
+              className="text-3xl text-[#6E171A]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Lluvia de sobres
+            </p>
+          </div>
+
         </div>
 
-        <div className="py-20 px-6">
-          <h2
-            className="text-5xl md:text-7xl font-normal text-[#F8E7A1] mb-8"
-            style={{ fontFamily: "'Great Vibes', cursive" }}
+        {/* Fotografía del salón */}
+        <div className="relative">
+          <div className="absolute -inset-3 border border-[#A98342]/35" />
+
+          <img
+            src="/images/jardin-miniatura.jpg"
+            alt={evento.lugar.nombre}
+            className="relative w-full max-w-md mx-auto aspect-[4/3] object-cover shadow-xl"
+          />
+
+          <div
+            className="mt-6 text-[#9A7437] text-xl tracking-[0.4em]"
           >
-            Con mucho amor me acompañan
-          </h2>
-
-          <div className="max-w-2xl mx-auto text-xl md:text-2xl space-y-12">
-            <div data-aos="fade-up" data-aos-delay="100">
-              <p className="font-semibold text-[#F8E7A1] mb-2">Mis Padres:</p>
-              <div className="w-40 h-0.5 bg-[#F8E7A1] mx-auto my-4 rounded-full"></div>
-              {evento.familia.padres.map((nombre) => (
-  <p key={nombre}>{nombre}</p>
-))}
-            </div>
-
-            <div data-aos="fade-up" data-aos-delay="200" className="mt-8">
-              <p className="font-semibold text-[#F8E7A1] mb-2">Mis Padrinos:</p>
-              <div className="w-40 h-0.5 bg-[#F8E7A1] mx-auto my-4 rounded-full"></div>
-             {evento.familia.padrinos.map((nombre) => (
-  <p key={nombre}>{nombre}</p>
-))}
-            </div>
-
-         <div data-aos="fade-up" data-aos-delay="300" className="mt-10">
-  <p
-    className="text-4xl md:text-6xl text-[#F8E7A1] max-w-4xl mx-auto leading-tight"
-    style={{ fontFamily: "'Great Vibes', cursive" }}
-  >
-    ¡Acompáñame tú también a celebrar este momento tan especial
-    <br />
-    lleno de amor, alegría y sueños cumplidos!
-  </p>
-</div>
+            ❦ ✦ ❦
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
-          <svg
-            viewBox="0 0 1440 320"
-            className="w-full h-[80px] rotate-180"
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="#5A2E82"
-              d="M0,64L48,74.7C96,85,192,107,288,122.7C384,139,480,149,576,138.7C672,128,768,96,864,85.3C960,75,1056,85,1152,106.7C1248,128,1344,160,1392,176L1440,192L1440,0L0,0Z"
-            />
-          </svg>
-        </div>
-      </section>
+      </div>
+    </div>
 
-     <section className="py-20 px-6 text-center relative z-10" data-aos="fade-up">
- <h2
-  className="text-5xl md:text-7xl text-[#7B4BA3] mb-10 font-normal"
-  style={{ fontFamily: "'Great Vibes', cursive" }}
+    {/* Ornamento inferior */}
+    <div className="flex items-center justify-center gap-4 mt-12">
+      <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+      <span className="text-[#9A7437] text-2xl">❦</span>
+      <span className="text-[#6E171A] text-lg">✦</span>
+      <span className="text-[#9A7437] text-2xl">❦</span>
+      <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+    </div>
+
+  </div>
+</section>
+
+
+<section
+  className="relative pt-4 md:pt-6 pb-2 px-4 md:px-6 z-10 overflow-hidden"
+  data-aos="fade-up"
 >
-  Detalles del Evento
-</h2>
-
-
-  <div className="max-w-3xl mx-auto space-y-10 text-xl md:text-2xl">
-    <div
-      className="flex flex-col items-center"
-      data-aos="fade-up"
-      data-aos-delay="50"
-    >
-      <p className="font-semibold text-[#B78A25]">Fecha</p>
-      <p>{evento.fecha.texto}</p>
-      <p>7:00 pm</p>
-    </div>
-
-    <div
-      className="flex flex-col items-center"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
+  <div className="max-w-4xl mx-auto text-center">
+    <div className="relative max-w-3xl mx-auto">
+      <div className="absolute inset-3 border border-[#A98342]/15 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(176,141,87,0.08),transparent_68%)] pointer-events-none" />
       <img
-        src="/iconos/ubicacion.png"
-        alt="Ubicación"
-        className="w-10 h-10 mb-4"
+        src="/images/zoe-itinerario.png"
+        alt="Ilustración victoriana de Zoé con antifaz"
+        className="relative z-10 block w-full h-auto object-contain"
       />
-
-    <p className="font-semibold text-[#B78A25]">
-  {evento.lugar.nombre}
-</p>
-      <p>
-        Blvd. Lázaro Cárdenas 1085, Las Flores, 21330 Mexicali, B.C.
-      </p>
-
-      <a
-        href={evento.lugar.mapsUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block mt-5 px-6 py-3 rounded-full bg-[#7B4BA3] text-white font-semibold hover:bg-[#B78A25] transition"
-      >
-        Ver ubicación
-      </a>
-    </div>
-
-    <div
-      className="flex flex-col items-center"
-      data-aos="fade-up"
-      data-aos-delay="200"
-    >
-      <img
-        src="/images/jardin-miniatura.jpg"
-        alt={evento.lugar.nombre}
-        className="rounded-lg shadow-lg w-72 h-auto object-cover"
-      />
-    </div>
-
-    <div
-      className="flex flex-col items-center"
-      data-aos="fade-up"
-      data-aos-delay="300"
-    >
-      <img
-        src="/iconos/vestimenta.png"
-        alt="Vestimenta"
-        className="w-10 h-10 mb-4"
-      />
-
-      <p className="font-semibold text-[#B78A25]">
-        Código de vestimenta
-      </p>
-
-      <p>Formal</p>
-    </div>
-
-      <div
-      className="flex flex-col items-center"
-      data-aos="fade-up"
-      data-aos-delay="400"
-    >
-      <img
-        src="/iconos/obsequio.png"
-        alt="Obsequio"
-        className="w-10 h-10 mb-4"
-      />
-
-      <p className="font-semibold text-[#B78A25]">Obsequios</p>
-
-      <p>Lluvia de sobres</p>
     </div>
   </div>
 </section>
 
 <section
-  className="py-20 px-6 relative z-10 overflow-hidden"
+  className="relative pt-8 md:pt-10 pb-24 px-5 md:px-6 z-10 overflow-hidden"
   data-aos="fade-up"
 >
-
-
   <div className="max-w-5xl mx-auto text-center">
+
+    <p
+      className="uppercase tracking-[0.3em] text-[#9A7437] text-sm md:text-base font-semibold mb-3"
+      style={{ fontFamily: "'Cormorant Garamond', serif" }}
+    >
+      Una noche para recordar
+    </p>
+
     <h2
-      className="text-5xl md:text-7xl text-[#7B4BA3] mb-4 font-normal"
+      className="text-6xl md:text-8xl text-[#6E171A] mb-5 font-normal"
       style={{ fontFamily: "'Great Vibes', cursive" }}
     >
       Itinerario
     </h2>
 
-    <p className="text-[#6B5A75] text-lg md:text-xl mb-14 max-w-2xl mx-auto">
+    <p
+      className="text-[#493B34] text-xl md:text-2xl mb-14 max-w-2xl mx-auto leading-relaxed"
+      style={{ fontFamily: "'Cormorant Garamond', serif" }}
+    >
       Momentos especiales preparados con mucho cariño para disfrutar juntos
       esta noche inolvidable.
     </p>
 
-    <div className="relative max-w-3xl mx-auto">
-      {/* Línea vertical */}
-      <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#B78A25]/20 via-[#B78A25] to-[#B78A25]/20 md:-translate-x-1/2" />
+    <div className="relative max-w-4xl mx-auto bg-[#F6E8D1]/92 border border-[#A98342]/45 shadow-2xl px-5 py-10 md:px-10 md:py-12">
+      <div className="absolute inset-3 border border-[#A98342]/20 pointer-events-none" />
 
-      {[
-        {
-          hora: "7:00 pm",
-          titulo: "Recepción",
-          detalle: "Bienvenida a nuestros invitados",
-        },
-        {
-          hora: "7:30 pm",
-          titulo: "Entrada",
-          detalle: "Un momento mágico para dar inicio a la celebración",
-        },
-        {
-          hora: "8:30 pm",
-          titulo: "Cena",
-          detalle: "Compartamos una deliciosa cena en familia y amigos",
-        },
-        {
-          hora: "9:00 pm",
-          titulo: "Vals",
-          detalle: "Un instante lleno de emoción y recuerdos",
-        },
-        {
-          hora: "9:30 pm",
-          titulo: "Brindis",
-          detalle: "Celebremos los sueños, la alegría y los nuevos comienzos",
-        },
-        {
-          hora: "10:00 pm",
-          titulo: "¡A bailar y disfrutar!",
-          detalle: "Que comience la fiesta",
-        },
-        {
-          hora: "1:00 am",
-          titulo: "Fin",
-          detalle: "Gracias por acompañarme",
-        },
-      ].map((item, index) => (
-        <div
-          key={item.hora}
-          className={`relative flex items-center mb-10 ${
-            index % 2 === 0 ? "md:justify-start" : "md:justify-end"
-          }`}
-          data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-          data-aos-delay={index * 100}
-        >
-          {/* Punto decorativo */}
-          <div className="absolute left-6 md:left-1/2 w-5 h-5 bg-[#B78A25] rounded-full border-4 border-white shadow-md -translate-x-1/2 z-10" />
+      <div className="relative z-10">
+        {/* Línea central */}
+        <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#9A7437]/10 via-[#9A7437]/65 to-[#9A7437]/10 md:-translate-x-1/2" />
 
-          {/* Tarjeta */}
+        {[
+          {
+            hora: "7:00 pm",
+            titulo: "Recepción",
+            detalle: "Bienvenida a nuestros invitados",
+          },
+          {
+            hora: "7:45 pm",
+            titulo: "Vals",
+            detalle: "Un momento especial para celebrar mis XV años",
+          },
+          {
+            hora: "8:15 pm",
+            titulo: "Brindis",
+            detalle: "Celebremos juntos esta noche inolvidable",
+          },
+          {
+            hora: "8:30 pm",
+            titulo: "Cena",
+            detalle: "Compartamos una deliciosa cena en familia y amigos",
+          },
+          {
+            hora: "9:00 pm",
+            titulo: "Fotos",
+            detalle: "Un momento para guardar recuerdos de esta noche",
+          },
+          {
+            hora: "Después",
+            titulo: "¡Fiesta!",
+            detalle: "A bailar y disfrutar juntos",
+          },
+        ].map((item, index) => (
           <div
-            className={`ml-14 md:ml-0 w-full md:w-[44%] bg-white/90 border border-purple-100 rounded-[28px] shadow-lg p-6 text-left hover:shadow-xl transition ${
-              index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
+            key={`${item.hora}-${item.titulo}`}
+            className={`relative flex items-stretch mb-8 last:mb-0 ${
+              index % 2 === 0 ? "md:justify-start" : "md:justify-end"
             }`}
+            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            data-aos-delay={index * 90}
           >
-            <p className="text-[#B78A25] font-bold text-xl mb-1">
-              {item.hora}
-            </p>
+            {/* Medallón de la línea */}
+            <div className="absolute left-5 md:left-1/2 top-7 -translate-x-1/2 z-20 flex items-center justify-center w-7 h-7 bg-[#F6E8D1] border border-[#9A7437]/70 rotate-45 shadow-sm">
+              <span className="-rotate-45 text-[#6E171A] text-xs">✦</span>
+            </div>
 
-            <h3
-              className="text-3xl md:text-4xl text-[#7B4BA3] mb-2 font-normal"
-              style={{ fontFamily: "'Great Vibes', cursive" }}
+            {/* Tarjeta */}
+            <div
+              className={`ml-11 md:ml-0 w-[calc(100%-2.75rem)] md:w-[43%] relative bg-[#FFF9EF]/85 border border-[#A98342]/35 px-5 py-5 sm:px-6 sm:py-6 text-left shadow-lg ${
+                index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
+              }`}
             >
-              {item.titulo}
-            </h3>
+              <div className="absolute inset-2 border border-[#A98342]/15 pointer-events-none" />
 
-            <p className="text-[#6B5A75] text-base md:text-lg leading-relaxed">
-              {item.detalle}
-            </p>
+              <div className="relative z-10">
+                <p
+                  className="uppercase tracking-[0.22em] text-[#9A7437] text-sm md:text-base font-semibold mb-2"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                >
+                  {item.hora}
+                </p>
+
+                <h3
+                  className="text-4xl md:text-5xl text-[#6E171A] mb-2 font-normal leading-none"
+                  style={{ fontFamily: "'Great Vibes', cursive" }}
+                >
+                  {item.titulo}
+                </h3>
+
+                <p
+                  className="text-[#493B34] text-base md:text-lg leading-relaxed"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                >
+                  {item.detalle}
+                </p>
+              </div>
+            </div>
           </div>
+        ))}
+
+        <div className="flex items-center justify-center gap-4 mt-10">
+          <span className="h-px w-14 md:w-20 bg-[#9A7437]/50" />
+          <span className="text-[#9A7437] text-xl">❦</span>
+          <span className="h-px w-14 md:w-20 bg-[#9A7437]/50" />
         </div>
-      ))}
+      </div>
     </div>
   </div>
-
-
-
 </section>
-      <section className="py-16 px-6 text-center relative z-10" data-aos="fade-up">
+
+      <section
+        className="relative py-20 md:py-24 px-4 md:px-6 text-center z-10 overflow-hidden"
+        data-aos="fade-up"
+      >
         <div className="max-w-6xl mx-auto">
-          <p className="uppercase tracking-[0.32em] text-[#B78A25] text-sm md:text-base font-bold mb-3">
+          <div className="flex items-center justify-center gap-4 mb-5">
+            <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+            <span className="text-[#9A7437] text-2xl">❦</span>
+            <span className="text-[#6E171A] text-lg">✦</span>
+            <span className="text-[#9A7437] text-2xl">❦</span>
+            <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+          </div>
+
+          <p
+            className="uppercase tracking-[0.32em] text-[#9A7437] text-sm md:text-base font-semibold mb-3"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
             Recuerdos especiales
           </p>
 
           <h2
-            className="text-5xl md:text-7xl font-normal text-[#7B4BA3] mb-4"
+            className="text-6xl md:text-8xl font-normal text-[#6E171A] mb-5"
             style={{ fontFamily: "'Great Vibes', cursive" }}
           >
             Galería
           </h2>
 
-          <p className="max-w-2xl mx-auto text-xl md:text-2xl text-[#4B3561] mb-10">
-            Hace quince años comenzó mi cuento. Hoy, con el corazón lleno de sueños e ilusión, te invito a compartir el capítulo más especial de mi historia.
+          <p
+            className="max-w-2xl mx-auto text-xl md:text-2xl text-[#493B34] mb-12 leading-relaxed"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Quince años de momentos, sueños y recuerdos nos han traído hasta
+            esta noche. Acompáñame a celebrar una nueva etapa de mi historia.
           </p>
 
-          <div className="relative rounded-[2rem] bg-white/70 backdrop-blur-md border border-[#E8C45C]/50 shadow-xl px-4 py-6 md:px-6 overflow-hidden">
-            <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-5">
+          <div className="relative bg-[#F6E8D1]/90 border border-[#A98342]/45 shadow-2xl px-4 py-8 md:px-8 md:py-10">
+            <div className="absolute inset-3 border border-[#A98342]/20 pointer-events-none" />
+
+            <div className="relative z-10 flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4">
               {fotosGaleria.map((foto, index) => (
                 <div
                   key={foto}
-                  className="shrink-0 w-[82%] sm:w-[48%] md:w-[32%] lg:w-[24%] snap-center"
+                  className="shrink-0 w-[88%] sm:w-[48%] md:w-[32%] lg:w-[24%] snap-center"
                 >
-                  <div className="rounded-[1.5rem] overflow-hidden border-4 border-[#F8E7A1] shadow-lg bg-[#FFF7EC]">
+                  <div className="relative bg-[#E7D4B5] p-2 border border-[#9A7437]/50 shadow-xl">
+                    <div className="absolute inset-1 border border-[#9A7437]/25 pointer-events-none" />
                     <img
                       src={foto}
-                    alt={`Foto de ${evento.nombre} ${index + 1}`}
-                      className="w-full aspect-[3/4] object-cover hover:scale-105 transition duration-500"
+                      alt={`Foto de ${evento.nombre} ${index + 1}`}
+                      className="relative w-full aspect-[3/4] object-cover grayscale-[8%] hover:grayscale-0 hover:scale-[1.02] transition duration-500"
                     />
+                  </div>
+
+                  <div className="mt-4 text-[#9A7437] text-lg tracking-[0.35em]">
+                    ❦ ✦ ❦
                   </div>
                 </div>
               ))}
             </div>
 
-            <p className="text-base md:text-lg text-[#7B4BA3] font-semibold mt-2">
-              Desliza para ver más fotos
+            <p
+              className="relative z-10 mt-2 uppercase tracking-[0.2em] text-sm md:text-base text-[#6E171A] font-semibold"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Desliza para descubrir más recuerdos
             </p>
+          </div>
+
+          <div className="flex items-center justify-center gap-4 mt-12">
+            <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+            <span className="text-[#9A7437] text-2xl">❦</span>
+            <span className="text-[#6E171A] text-lg">✦</span>
+            <span className="text-[#9A7437] text-2xl">❦</span>
+            <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-6 text-center bg-[#FFF7EC]/90 relative z-10" data-aos="fade-up">
-        <div className="flex flex-col items-center space-y-6">
-          <img src="/iconos/camara.png" alt="Comparte tus fotos" className="w-16 h-16" />
-
-          <h2 className="text-4xl md:text-5xl font-bold text-[#7B4BA3] animate-heartbeat">
-            #XVSandraAlicia
-          </h2>
-
-                </div>
-      </section>
-
-      <section className="py-16 px-6 text-center relative z-10" data-aos="zoom-in-up">
+      <section className="py-12 md:py-16 px-5 md:px-6 text-center relative z-10" data-aos="zoom-in-up">
         <h2
-          className="text-5xl md:text-6xl font-normal text-[#7B4BA3] mb-2"
+          className="text-5xl md:text-6xl font-normal text-[#6E171A] mb-2"
           style={{ fontFamily: "'Great Vibes', cursive" }}
         >
           ¿Podrás acompañarme en este día tan especial?
@@ -613,37 +889,98 @@ catch (error: any) {
 />
       </section>
 
-      <section className="py-16 text-center relative z-10" data-aos="fade-up">
-        <h2
-          className="text-5xl md:text-6xl font-normal text-[#7B4BA3] mb-4"
-          style={{ fontFamily: "'Great Vibes', cursive" }}
-        >
-          Libro de visitas
-        </h2>
+      <section
+        className="relative py-20 md:py-24 px-4 md:px-6 text-center z-10 overflow-hidden"
+        data-aos="fade-up"
+      >
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+            <span className="text-[#9A7437] text-2xl">❦</span>
+            <span className="text-[#6E171A] text-lg">✦</span>
+            <span className="text-[#9A7437] text-2xl">❦</span>
+            <span className="h-px w-14 md:w-24 bg-[#9A7437]/60" />
+          </div>
 
-        <p className="mb-4 text-xl md:text-2xl">Déjame tu mensaje o buenos deseos</p>
+          <p
+            className="uppercase tracking-[0.3em] text-[#9A7437] text-sm md:text-base font-semibold mb-3"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Un recuerdo para siempre
+          </p>
 
-        <textarea
-          value={mensajeLibro}
-          onChange={(e) => setMensajeLibro(e.target.value)}
-          className="w-3/4 md:w-1/2 h-36 p-5 rounded-2xl border-2 border-[#C7A4E0] bg-white/90 text-lg md:text-xl focus:outline-none focus:ring-2 focus:ring-[#E8C45C]"
-          placeholder="Escribe tu mensaje aquí..."
-        ></textarea>
+          <h2
+            className="text-6xl md:text-8xl font-normal text-[#6E171A] mb-5"
+            style={{ fontFamily: "'Great Vibes', cursive" }}
+          >
+            Libro de visitas
+          </h2>
 
-        <br />
+          <p
+            className="max-w-2xl mx-auto text-xl md:text-2xl text-[#493B34] mb-12 leading-relaxed"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Déjame unas palabras, un deseo o un recuerdo especial para guardar
+            de esta noche.
+          </p>
 
-        <button
-          onClick={enviarMensajeLibro}
-          className="mt-4 bg-[#7B4BA3] text-white px-8 py-3 rounded-full hover:bg-[#E8C45C] hover:text-[#4B3561] transition text-lg md:text-xl font-semibold"
-        >
-          Enviar mensaje
-        </button>
+          <div className="relative bg-[#F6E8D1]/95 border border-[#A98342]/45 shadow-2xl px-6 py-10 md:px-12 md:py-12">
+            <div className="absolute inset-3 border border-[#A98342]/20 pointer-events-none" />
 
-        {mensajeEnviado && (
-          <p className="mt-4 text-green-600 font-semibold">{mensajeEnviado}</p>
-        )}
+            <div className="relative z-10">
+              <p
+                className="uppercase tracking-[0.2em] text-[#9A7437] text-sm font-semibold mb-3 text-left max-w-2xl mx-auto"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Tu mensaje
+              </p>
 
-           </section>
+              <textarea
+                value={mensajeLibro}
+                onChange={(e) => setMensajeLibro(e.target.value)}
+                className="w-full max-w-2xl h-44 p-5 border border-[#A98342]/45 bg-[#FFF9EF] text-[#241B18] text-lg md:text-xl outline-none focus:ring-2 focus:ring-[#9A7437]/30 resize-none"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                placeholder="Escribe tu mensaje aquí..."
+              ></textarea>
+
+              <button
+                onClick={enviarMensajeLibro}
+                className="mt-7 px-10 py-3 border border-[#9A7437] bg-[#6E171A] text-[#FFF4E3] uppercase tracking-[0.16em] text-sm md:text-base font-semibold hover:bg-[#9A7437] transition"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Enviar mensaje
+              </button>
+
+              {mensajeEnviado && (
+                <p
+                  className={`mt-5 font-semibold ${
+                    mensajeEnviado.includes("Gracias")
+                      ? "text-[#4D5F3B]"
+                      : "text-[#8A1F24]"
+                  }`}
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                >
+                  {mensajeEnviado}
+                </p>
+              )}
+
+              <div className="flex items-center justify-center gap-4 mt-10">
+                <span className="h-px w-14 md:w-20 bg-[#9A7437]/60" />
+                <span className="text-[#9A7437] text-xl">❦</span>
+                <span className="h-px w-14 md:w-20 bg-[#9A7437]/60" />
+              </div>
+            </div>
+          </div>
+
+          <p
+            className="mt-12 text-4xl md:text-5xl text-[#6E171A] leading-tight"
+            style={{ fontFamily: "'Great Vibes', cursive" }}
+          >
+            Gracias por ser parte de este día tan especial.
+          </p>
+        </div>
+      </section>
+
       </div>
   );
 }

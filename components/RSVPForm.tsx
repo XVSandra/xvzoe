@@ -94,8 +94,16 @@ export default function RSVPForm({
 
   if (cargandoConfirmacion) {
     return (
-      <div className="max-w-xl mx-auto section-card rounded-[28px] p-8 text-center">
-        <p className="text-gray-500">Cargando confirmación...</p>
+      <div className="max-w-xl mx-auto px-6">
+        <div className="relative bg-[#F6E8D1]/95 border border-[#A98342]/45 shadow-xl p-8 text-center">
+          <div className="absolute inset-3 border border-[#A98342]/20 pointer-events-none" />
+          <p
+            className="relative z-10 text-[#493B34] text-lg"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Cargando confirmación...
+          </p>
+        </div>
       </div>
     );
   }
@@ -103,91 +111,157 @@ export default function RSVPForm({
   return (
     <form
       onSubmit={manejarSubmit}
-      className="max-w-xl mx-auto section-card rounded-[28px] p-8 space-y-5"
+      className="relative max-w-2xl mx-auto bg-[#F6E8D1]/95 border border-[#A98342]/45 shadow-2xl px-6 py-10 md:px-10 md:py-12"
     >
-     <div className="text-center mb-2">
-  <h3 className="text-2xl md:text-3xl font-bold text-[#7B4BA3]">
-    Confirmación de asistencia
-  </h3>
+      <div className="absolute inset-3 border border-[#A98342]/20 pointer-events-none" />
 
- <div className="mt-3 text-sm md:text-base text-[#6B5A75] leading-relaxed">
-  <p>Agradecemos tu respuesta a más tardar el</p>
-
-  <p className="font-bold text-[#B78A25] text-xl md:text-2xl mt-1">
-    {evento.rsvp.fechaLimite}
-  </p>
-</div>
-</div>
-
- <div className="text-center bg-[#fff4f8] border border-pink-100 rounded-2xl p-5">
-        <p className="text-sm text-gray-600">Invitación para</p>
-        <p className="text-2xl font-bold text-[#7B4BA3]">
-          {nombreInvitado}
-        </p>
-      </div>
-
-      <div className="bg-[#fff4f8] border border-pink-100 rounded-2xl p-4 text-center">
-        <p className="text-sm text-gray-600">Pases asignados</p>
-        <p className="text-3xl font-bold text-[#B78A25]">
-          {pasesAsignados}
-        </p>
-      </div>
-
-      {confirmacionExistente && (
-        <div className="bg-green-50 border border-green-200 text-green-700 rounded-2xl p-4 text-center">
-          Tu confirmación ya fue registrada. Puedes actualizarla si necesitas
-          hacer algún cambio.
+      <div className="relative z-10">
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <span className="h-px w-14 md:w-20 bg-[#9A7437]/60" />
+          <span className="text-[#9A7437] text-2xl">❦</span>
+          <span className="text-[#6E171A] text-lg">✦</span>
+          <span className="text-[#9A7437] text-2xl">❦</span>
+          <span className="h-px w-14 md:w-20 bg-[#9A7437]/60" />
         </div>
-      )}
 
-      <div>
-        <label className="block text-sm font-semibold text-[#9b355e] mb-2">
-          Confirmación
-        </label>
+        <div className="text-center mb-9">
+          <p
+            className="uppercase tracking-[0.28em] text-[#9A7437] text-sm md:text-base font-semibold mb-2"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            RSVP
+          </p>
 
-        <select
-          value={asistencia}
-          onChange={(e) => {
-            setAsistencia(e.target.value);
-            setCantidadConfirmada(e.target.value === "No asistiré" ? 0 : 1);
-          }}
-          className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30"
+          <h3
+            className="text-5xl md:text-6xl font-normal text-[#6E171A] leading-tight"
+            style={{ fontFamily: "'Great Vibes', cursive" }}
+          >
+            Confirma tu asistencia
+          </h3>
+
+          <div
+            className="mt-5 text-lg md:text-xl text-[#493B34] leading-relaxed"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            <p>Agradecemos tu respuesta a más tardar el</p>
+            <p className="font-semibold text-[#9A7437] text-2xl md:text-3xl mt-1">
+              {evento.rsvp.fechaLimite}
+            </p>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-5 mb-8">
+          <div className="bg-[#FBF3E4] border border-[#A98342]/30 p-5 text-center">
+            <p
+              className="uppercase tracking-[0.2em] text-xs md:text-sm text-[#9A7437] mb-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Invitación para
+            </p>
+            <p
+              className="text-2xl md:text-3xl text-[#6E171A]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              {nombreInvitado}
+            </p>
+          </div>
+
+          <div className="bg-[#FBF3E4] border border-[#A98342]/30 p-5 text-center">
+            <p
+              className="uppercase tracking-[0.2em] text-xs md:text-sm text-[#9A7437] mb-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Pases asignados
+            </p>
+            <p
+              className="text-4xl text-[#6E171A]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              {pasesAsignados}
+            </p>
+          </div>
+        </div>
+
+        {confirmacionExistente && (
+          <div
+            className="mb-7 bg-[#EEF3E8] border border-[#7B8F62]/35 text-[#4D5F3B] px-5 py-4 text-center"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Tu confirmación ya fue registrada. Puedes actualizarla si necesitas
+            hacer algún cambio.
+          </div>
+        )}
+
+        <div className="space-y-6">
+          <div>
+            <label
+              className="block uppercase tracking-[0.18em] text-sm font-semibold text-[#6E171A] mb-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Confirmación
+            </label>
+
+            <select
+              value={asistencia}
+              onChange={(e) => {
+                setAsistencia(e.target.value);
+                setCantidadConfirmada(
+                  e.target.value === "No asistiré" ? 0 : 1
+                );
+              }}
+              className="w-full bg-[#FFF9EF] border border-[#A98342]/45 px-4 py-3 text-[#241B18] outline-none focus:ring-2 focus:ring-[#9A7437]/30"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              <option>Sí asistiré</option>
+              <option>No asistiré</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              className="block uppercase tracking-[0.18em] text-sm font-semibold text-[#6E171A] mb-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Cantidad de asistentes confirmados
+            </label>
+
+            <select
+              value={cantidadConfirmada}
+              onChange={(e) =>
+                setCantidadConfirmada(Number(e.target.value))
+              }
+              disabled={asistencia === "No asistiré"}
+              className="w-full bg-[#FFF9EF] border border-[#A98342]/45 px-4 py-3 text-[#241B18] outline-none focus:ring-2 focus:ring-[#9A7437]/30 disabled:bg-[#E9E1D5] disabled:text-[#8A8178]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              {opcionesCantidad.map((num) => (
+                <option key={num} value={num}>
+                  {num}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          disabled={enviando}
+          className="block mx-auto mt-9 px-10 py-3 border border-[#9A7437] bg-[#6E171A] text-[#FFF4E3] uppercase tracking-[0.15em] text-sm md:text-base font-semibold hover:bg-[#9A7437] transition disabled:opacity-60"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
-          <option>Sí asistiré</option>
-          <option>No asistiré</option>
-        </select>
+          {enviando
+            ? "Guardando..."
+            : confirmacionExistente
+            ? "Actualizar confirmación"
+            : "Enviar confirmación"}
+        </button>
+
+        <div className="flex items-center justify-center gap-4 mt-9">
+          <span className="h-px w-14 md:w-20 bg-[#9A7437]/60" />
+          <span className="text-[#9A7437] text-xl">❦</span>
+          <span className="h-px w-14 md:w-20 bg-[#9A7437]/60" />
+        </div>
       </div>
-
-      <div>
-        <label className="block text-sm font-semibold text-[#9b355e] mb-2">
-          Cantidad de asistentes confirmados
-        </label>
-
-        <select
-          value={cantidadConfirmada}
-          onChange={(e) => setCantidadConfirmada(Number(e.target.value))}
-          disabled={asistencia === "No asistiré"}
-          className="w-full border border-pink-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#FF3471]/30 disabled:bg-gray-100"
-        >
-          {opcionesCantidad.map((num) => (
-            <option key={num} value={num}>
-              {num}
-            </option>
-          ))}
-        </select>
-      </div>
-
-     <button
-  type="submit"
-  disabled={enviando}
-  className="block mx-auto px-10 py-3 rounded-full bg-[#7B4BA3] text-white font-semibold hover:bg-[#E8C45C] hover:text-[#4B3561] transition disabled:opacity-60"
->
-  {enviando
-    ? "Guardando..."
-    : confirmacionExistente
-    ? "Actualizar confirmación"
-    : "Enviar confirmación"}
-</button>
     </form>
   );
 }
