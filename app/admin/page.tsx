@@ -431,7 +431,7 @@ const enviarWhatsApp = (telefono: string, codigo: string, nombre: string) => {
 
   const linkInvitacion = `${urlBaseInvitacion}/?codigo=${codigo}`;
 
-  const mensaje = `Hola ${nombre} 💜
+  const mensaje = `Hola ${nombre} ❤️
 
 ${evento.textos.mensajeWhatsApp}
 
