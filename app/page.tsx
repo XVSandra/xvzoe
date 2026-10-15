@@ -338,9 +338,9 @@ catch (error: any) {
         className="mt-9 text-3xl sm:text-4xl md:text-6xl text-[#6E171A] leading-tight"
         style={{ fontFamily: "'Great Vibes', cursive" }}
       >
-        Una noche de máscaras, elegancia 
+        Una noche de máscaras, elegancia y
         <br className="hidden md:block" />
-        y recuerdos para siempre
+         recuerdos para siempre
       </p>
 
       {/* Separador antes del contador */}
