@@ -334,14 +334,14 @@ catch (error: any) {
         </span>
       </div>
 
-      <p
-        className="mt-9 text-3xl sm:text-4xl md:text-6xl text-[#6E171A] leading-tight"
-        style={{ fontFamily: "'Great Vibes', cursive" }}
-      >
-        Una noche de máscaras, elegancia y
-        <br className="hidden md:block" />
-         recuerdos para siempre
-      </p>
+   <p
+  className="mt-9 text-3xl sm:text-4xl md:text-6xl text-[#6E171A] leading-[1.5]"
+  style={{ fontFamily: "'Great Vibes', cursive" }}
+>
+  Una noche de máscaras, elegancia
+  <br />
+  y recuerdos para siempre
+</p>
 
       {/* Separador antes del contador */}
       <div className="flex items-center justify-center gap-4 mt-10 mb-4">
