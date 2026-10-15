@@ -132,6 +132,10 @@ catch (error: any) {
     "/images/galeria/foto4.jpg",
     "/images/galeria/foto5.jpg",
     "/images/galeria/foto6.jpg",
+    "/images/galeria/foto7.jpg",
+    "/images/galeria/foto8.jpg",
+    "/images/galeria/foto9.jpg",
+    "/images/galeria/foto10.jpg",
   ];
 
   return (
@@ -592,12 +596,19 @@ catch (error: any) {
               Código de vestimenta
             </p>
 
-            <p
-              className="text-3xl text-[#6E171A]"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
-            >
-              Formal
-            </p>
+    <p
+  className="text-3xl text-[#6E171A]"
+  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+>
+  Formal
+</p>
+
+<p
+  className="mt-1 text-xl md:text-2xl text-[#493B34]"
+  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+>
+  Color rojo reservado para la quinceañera
+</p>
           </div>
 
           {/* Obsequios */}
@@ -857,7 +868,7 @@ catch (error: any) {
               className="relative z-10 mt-2 uppercase tracking-[0.2em] text-sm md:text-base text-[#6E171A] font-semibold"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              Desliza para descubrir más recuerdos
+              Desliza para descubrir más fotografías
             </p>
           </div>
 
